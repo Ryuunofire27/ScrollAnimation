@@ -1,11 +1,11 @@
 'use strict';
 
-var getCurrentPositon = function getCurrentPositon(scrollContainerElement) {
+var getCurrentPosition = function getCurrentPosition(scrollContainerElement) {
   return scrollContainerElement.scrollTop;
 };
 
 var getElementTopPosition = function getElementTopPosition(elementToScroll, scrollContainerElement) {
-  return elementToScroll.getBoundingClientRect().top + getCurrentPositon(scrollContainerElement);
+  return elementToScroll.getBoundingClientRect().top + getCurrentPosition(scrollContainerElement);
 };
 
 var getAddingTop = function getAddingTop(differencePosition, time) {
@@ -18,16 +18,16 @@ var getAddingTop = function getAddingTop(differencePosition, time) {
 
 var animateScroll = function animateScroll(elementToScroll, time, addingPositionHeader, scrollContainerElement) {
   var elementTopPosition = getElementTopPosition(elementToScroll, scrollContainerElement) - addingPositionHeader;
-  var currentTopPosition = getCurrentPositon(scrollContainerElement);
+  var currentTopPosition = getCurrentPosition(scrollContainerElement);
   var differencePosition = elementTopPosition - currentTopPosition;
   var addingTop = getAddingTop(differencePosition, time);
   var animateInterval = setInterval(function () {
     if (addingTop > 0) {
-      if (getCurrentPositon() >= elementTopPosition - addingTop / 2 || scrollContainerElement.scrollTopMax <= scrollContainerElement.scrollTop + 10) {
+      if (getCurrentPosition(scrollContainerElement) >= elementTopPosition - addingTop / 2 || scrollContainerElement.scrollTopMax <= scrollContainerElement.scrollTop + 10) {
         clearInterval(animateInterval);
       }
     } else {
-      if (getCurrentPositon() <= elementTopPosition - addingTop / 2) {
+      if (getCurrentPosition(scrollContainerElement) <= elementTopPosition - addingTop / 2) {
         clearInterval(animateInterval);
       }
     }

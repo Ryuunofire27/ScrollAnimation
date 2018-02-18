@@ -1,7 +1,7 @@
-const getCurrentPositon = scrollContainerElement => scrollContainerElement.scrollTop;
+const getCurrentPosition = scrollContainerElement => scrollContainerElement.scrollTop;
 
 const getElementTopPosition = (elementToScroll, scrollContainerElement) =>
-  elementToScroll.getBoundingClientRect().top + getCurrentPositon(scrollContainerElement);
+  elementToScroll.getBoundingClientRect().top + getCurrentPosition(scrollContainerElement);
 
 const getAddingTop = (differencePosition, time) => {
   const differencePositionByTime = Math.ceil(differencePosition / time);
@@ -14,17 +14,17 @@ const getAddingTop = (differencePosition, time) => {
 const animateScroll = (elementToScroll, time, addingPositionHeader, scrollContainerElement) => {
   const elementTopPosition =
     getElementTopPosition(elementToScroll, scrollContainerElement) - addingPositionHeader;
-  const currentTopPosition = getCurrentPositon(scrollContainerElement);
+  const currentTopPosition = getCurrentPosition(scrollContainerElement);
   const differencePosition = elementTopPosition - currentTopPosition;
   const addingTop = getAddingTop(differencePosition, time);
   const animateInterval = setInterval(() => {
     if (addingTop > 0) {
-      if (getCurrentPositon() >= elementTopPosition - (addingTop / 2)
+      if (getCurrentPosition(scrollContainerElement) >= elementTopPosition - (addingTop / 2)
         || scrollContainerElement.scrollTopMax <= (scrollContainerElement.scrollTop + 10)) {
         clearInterval(animateInterval);
       }
     } else {
-      if (getCurrentPositon() <= elementTopPosition - (addingTop / 2)) {
+      if (getCurrentPosition(scrollContainerElement) <= elementTopPosition - (addingTop / 2)) {
         clearInterval(animateInterval);
       }
     }
