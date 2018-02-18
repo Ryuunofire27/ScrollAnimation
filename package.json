@@ -1,6 +1,6 @@
 {
-  "name": "scroll-animation",
-  "version": "1.0.0",
+  "name": "scroll-animation-js",
+  "version": "1.0.1",
   "description": "Function to animate scroll to",
   "main": "dist/scroll-animation.js",
   "scripts": {

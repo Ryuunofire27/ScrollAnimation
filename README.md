@@ -7,7 +7,7 @@ Scroll animation is a function to navigate within the page
 Adding the script.
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/scroll-animation/dist/scroll-animation.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/scroll-animation-js/dist/scroll-animation.min.js" ></script>
 ```
 
 ### Using
