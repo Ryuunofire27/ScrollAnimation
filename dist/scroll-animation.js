@@ -18,7 +18,7 @@ var getAddingTop = function getAddingTop(differencePosition, time) {
 
 var animateScroll = function animateScroll(elementToScroll, time, addingPositionHeader, scrollContainerElement) {
   var elementTopPosition = getElementTopPosition(elementToScroll, scrollContainerElement) - addingPositionHeader;
-  var currentTopPosition = getCurrentPositon();
+  var currentTopPosition = getCurrentPositon(scrollContainerElement);
   var differencePosition = elementTopPosition - currentTopPosition;
   var addingTop = getAddingTop(differencePosition, time);
   var animateInterval = setInterval(function () {
