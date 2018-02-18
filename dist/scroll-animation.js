@@ -1,5 +1,7 @@
 'use strict';
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var getCurrentPosition = function getCurrentPosition(scrollContainerElement) {
   return scrollContainerElement.scrollTop;
 };
@@ -74,3 +76,11 @@ var scrollAnimation = function scrollAnimation(listElements, delay) {
     }
   }
 };
+
+(function () {
+  "use strict";
+
+  if ((typeof module === 'undefined' ? 'undefined' : _typeof(module)) === 'object' && _typeof(module.exports) === 'object') {
+    module.exports = scrollAnimation;
+  }
+})();

@@ -1,3 +1,5 @@
+
+
 const getCurrentPosition = scrollContainerElement => scrollContainerElement.scrollTop;
 
 const getElementTopPosition = (elementToScroll, scrollContainerElement) =>
@@ -54,3 +56,11 @@ const scrollAnimation =
       animateScrollEvent(element, delay, addingHeight, scrollContainerElement);
     }
   };
+
+(() => {
+  "use strict";
+    if(typeof module === 'object' && typeof module.exports === 'object'){
+        module.exports = scrollAnimation;
+    }
+  }
+)();
