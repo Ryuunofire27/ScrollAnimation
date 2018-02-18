@@ -17,6 +17,7 @@ scrollAnimation(listElements, delay[, addingHeight, scrollContainerElement]);
 ### Parameters
 
 listElements : Array of "li" elements with "a" like first children.
+
 delay : The time in milliseconds to navigate to the link.
 
 #### Optional
