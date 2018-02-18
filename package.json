@@ -1,0 +1,35 @@
+{
+  "name": "scroll-animation",
+  "version": "1.0.0",
+  "description": "Function to animate scroll to",
+  "main": "dist/scroll-animation.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/Ryuunofire27/ScrollAnimation.git"
+  },
+  "keywords": [
+    "scroll",
+    "animation"
+  ],
+  "author": "Carlos Villagomez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ryuunofire27/ScrollAnimation/issues"
+  },
+  "homepage": "https://github.com/Ryuunofire27/ScrollAnimation#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
