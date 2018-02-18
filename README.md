@@ -10,6 +10,14 @@ Adding the script.
 <script src="https://cdn.jsdelivr.net/npm/scroll-animation-js/dist/scroll-animation.min.js" ></script>
 ```
 
+Or install
+
+```
+npm i --save scroll-animation-js
+```
+
+and using with [browserify](https://github.com/browserify/browserify)
+
 ### Using
 
 scrollAnimation(listElements, delay[, addingHeight, scrollContainerElement]);
