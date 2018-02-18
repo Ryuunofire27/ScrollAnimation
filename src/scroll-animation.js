@@ -14,7 +14,7 @@ const getAddingTop = (differencePosition, time) => {
 const animateScroll = (elementToScroll, time, addingPositionHeader, scrollContainerElement) => {
   const elementTopPosition =
     getElementTopPosition(elementToScroll, scrollContainerElement) - addingPositionHeader;
-  const currentTopPosition = getCurrentPositon();
+  const currentTopPosition = getCurrentPositon(scrollContainerElement);
   const differencePosition = elementTopPosition - currentTopPosition;
   const addingTop = getAddingTop(differencePosition, time);
   const animateInterval = setInterval(() => {
