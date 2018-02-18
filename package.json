@@ -1,6 +1,6 @@
 {
   "name": "scroll-animation-js",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Function to animate scroll to",
   "main": "dist/scroll-animation.js",
   "scripts": {
@@ -31,8 +31,5 @@
     "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.0"
-  },
-  "dependencies": {
-    "jquery": "^3.3.1"
   }
 }
